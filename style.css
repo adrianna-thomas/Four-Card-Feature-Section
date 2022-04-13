@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    max-width: 100vw;
+    height: 100vh;
+    background-color: var(--Very-Light-Gray);
+}
+
+.container {
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+h1 {
+    font-weight: 200;
+    color: var(--Grayish-Blue);
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 1rem;
+}
+
+header p {
+    max-width: 40%;
+    margin: 0 auto;
+}
+
+h3 {
+    color: var(--Very-Dark-Blue);
+    font-size: 24px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    max-width: 23.33rem;
+    max-height: 16.66rem;
+    background-color: white;
+    padding: 2rem;
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    display: block;
+    margin-left: auto;
+}
+
+.card-cyan {
+    border-top: 3px solid var(--Cyan);
+}
+
+.card-red {
+    border-top: 3px solid var(--Red);
+    margin-bottom: 2rem;
+}
+
+.card-orange {
+    border-top: 3px solid var(--Orange);
+}
+
+.card-blue {
+    border-top: 3px solid var(--Blue);
+}
+
+.card-outer {
+    align-self: center;
+}
+
+p {
+    color: var(--Grayish-Blue);
+    font-weight: 200;
+}
+
+.card p {
+    margin: 1rem 0 2rem;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 400px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    h1,
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    header p {
+        max-width: 90%;
+    }
+    .container {
+        padding: 1rem 1rem;
+    }
+    .card {
+        max-width: 21rem;
+        max-height: 25rem;
+    }
+}
